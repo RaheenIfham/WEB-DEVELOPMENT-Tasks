@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Development Tasks — Raheen Ifham</title>
+<style>
+  :root {
+    --paper: #f6f3ec;
+    --ink: #1f2420;
+    --line: #d8d2c2;
+    --accent: #8a3324;
+    --muted: #6b6558;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.55;
+  }
+  .wrap {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+  .masthead {
+    border-bottom: 3px double var(--ink);
+    padding-bottom: 18px;
+    margin-bottom: 6px;
+  }
+  .masthead h1 {
+    font-size: 1.9rem;
+    margin: 0 0 4px;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+  }
+  .masthead .byline {
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .tally {
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin: 14px 0 34px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 14px;
+  }
+  ol.tasks {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: task;
+  }
+  ol.tasks li {
+    counter-increment: task;
+    border-bottom: 1px solid var(--line);
+  }
+  ol.tasks li:first-child {
+    border-top: 1px solid var(--line);
+  }
+  ol.tasks a {
+    display: grid;
+    grid-template-columns: 44px 1fr auto;
+    align-items: baseline;
+    gap: 14px;
+    padding: 18px 4px;
+    text-decoration: none;
+    color: inherit;
+  }
+  ol.tasks a::before {
+    content: counter(task, decimal-leading-zero);
+    font-family: 'Courier New', monospace;
+    color: var(--accent);
+    font-size: 0.95rem;
+  }
+  .task-title {
+    font-size: 1.08rem;
+  }
+  .task-desc {
+    display: block;
+    font-family: 'Courier New', monospace;
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-top: 3px;
+  }
+  .open {
+    font-family: 'Courier New', monospace;
+    font-size: 0.78rem;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+  ol.tasks a:hover .task-title {
+    color: var(--accent);
+  }
+  footer {
+    margin-top: 44px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="masthead">
+    <h1>Web Development — Lab Task Submissions</h1>
+    <div class="byline">Raheen Ifham</div>
+  </div>
+  <div class="tally">8 tasks — HTML / CSS coursework</div>
+
+  <ol class="tasks">
+    <li>
+      <a href="student-profile.html">
+        <span></span>
+        <span>
+          <span class="task-title">Student Profile Page</span>
+          <span class="task-desc">Personal profile using text formatting, image embedding, and page structure</span>
+        </span>
+        <span class="open">open →</span>
+      </a>
+    </li>
+    <li>
+      <a href="university-department.html">
+        <span></span>
+        <span>
+          <span class="task-title">University Department Website</span>
+          <span class="task-desc">Computer Science department page — lists, ordered lists, description lists, external link</span>
+        </span>
+        <span class="open">open →</span>
+      </a>
+    </li>
+    <li>
+      <a href="college-website.html">
+        <span></span>
+        <span>
+          <span class="task-title">College Website</span>
+          <span class="task-desc">Multi-section college page — headings, tables with rowspan/colspan, footer table</span>
+        </span>
+        <span class="open">open →</span>
+      </a>
+    </li>
+    <li>
+      <a href="food-restaurant.html">
+        <span></span>
+        <span>
+          <span class="task-title">Online Food Restaurant</span>
+          <span class="task-desc">Restaurant landing page — navigation, menu list, food table, ordered process list</span>
+        </span>
+        <span class="open">open →</span>
+      </a>
+    </li>
+    <li>
+      <a href="booking-form.html">
+        <span></span>
+        <span>
+          <span class="task-title">Hotel Room Booking Form</span>
+          <span class="task-desc">Form inputs — text, email, password, radio, select, checkboxes, date/time, url</span>
+        </span>
+        <span class="open">open →</span>
+      </a>
+    </li>
+    <li>
+      <a href="job-application-portal.html">
+        <span></span>
+        <span>
+          <span class="task-title">Job Application Portal</span>
+          <span class="task-desc">Application form — datalist, file upload, textarea, multipart form handling</span>
+        </span>
+        <span class="open">open →</span>
+      </a>
+    </li>
+    <li>
+      <a href="event-registration.html">
+        <span></span>
+        <span>
+          <span class="task-title">Online Event Registration</span>
+          <span class="task-desc">Festival registration form — combined input types, ID upload, comments field</span>
+        </span>
+        <span class="open">open →</span>
+      </a>
+    </li>
+    <li>
+      <a href="property-listing.html">
+        <span></span>
+        <span>
+          <span class="task-title">Real Estate Property Listing</span>
+          <span class="task-desc">Property submission form — multiple image upload, feature checkboxes, description</span>
+        </span>
+        <span class="open">open →</span>
+      </a>
+    </li>
+  </ol>
+
+  <footer>Web Development Lab — GitHub Pages deployment</footer>
+
+</div>
+</body>
+</html>
