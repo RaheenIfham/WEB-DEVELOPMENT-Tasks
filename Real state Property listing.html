@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Property Listing</title>
+</head>
+<body>
+
+    <h2>List Your Property</h2>
+    
+    <!-- enctype="multipart/form-data" allows image uploads to transfer correctly -->
+    <form action="/submit-property" method="POST" enctype="multipart/form-data">
+        
+        <!-- 1. Owner name -->
+        <p>
+            <label for="owner-name">Owner / Agent Full Name:</label><br>
+            <input type="text" id="owner-name" name="owner_name" placeholder="John Doe" required>
+        </p>
+
+        <!-- 2. Email -->
+        <p>
+            <label for="owner-email">Email Address:</label><br>
+            <input type="email" id="owner-email" name="owner_email" placeholder="johndoe@example.com" required>
+        </p>
+
+        <!-- 3. Phone -->
+        <p>
+            <label for="owner-phone">Phone Number:</label><br>
+            <input type="tel" id="owner-phone" name="owner_phone" placeholder="+1 (555) 123-4567" required>
+        </p>
+
+        <!-- 4. Property type using dropdown -->
+        <p>
+            <label for="property-type">Property Type:</label><br>
+            <select id="property-type" name="property_type" required>
+                <option value="">-- Select Property Type --</option>
+                <option value="apartment">Apartment / Condo</option>
+                <option value="house">Single Family House</option>
+                <option value="townhouse">Townhouse</option>
+                <option value="commercial">Commercial Building</option>
+            </select>
+        </p>
+
+        <!-- 5. City using datalist -->
+        <p>
+            <label for="city-input">City Location:</label><br>
+            <input type="text" id="city-input" name="property_city" list="city-options" placeholder="Type or select a city..." required>
+            <datalist id="city-options">
+                <option value="New York"></option>
+                <option value="Los Angeles"></option>
+                <option value="Chicago"></option>
+                <option value="Houston"></option>
+                <option value="Miami"></option>
+            </datalist>
+        </p>
+
+        <!-- 6. Number of bedrooms -->
+        <p>
+            <label for="bedroom-count">Number of Bedrooms:</label><br>
+            <input type="number" id="bedroom-count" name="bedroom_count" min="0" max="10" placeholder="e.g., 3" required>
+        </p>
+
+        <!-- 7. Price -->
+        <p>
+            <label for="property-price">Price ($):</label><br>
+            <input type="number" id="property-price" name="property_price" min="1" placeholder="e.g., 450000" required>
+        </p>
+
+        <!-- 8. Property availability date -->
+        <p>
+            <label for="availability-date">Property Availability Date:</label><br>
+            <input type="date" id="availability-date" name="availability_date" required>
+        </p>
+
+        <!-- 9. Property website URL -->
+        <p>
+            <label for="property-url">Virtual Tour / Property Website URL:</label><br>
+            <input type="url" id="property-url" name="property_url" placeholder="https://example.com">
+        </p>
+
+        <!-- 10. Property description -->
+        <p>
+            <label for="property-description">Property Description:</label><br>
+            <textarea id="property-description" name="property_description" rows="5" cols="50" placeholder="Describe the layout, neighborhood, nearby amenities, etc..."></textarea>
+        </p>
+
+        <!-- 11. Upload property images -->
+        <p>
+            <label for="property-images">Upload Property Images:</label><br>
+            <input type="file" id="property-images" name="property_images" accept="image/*" multiple required>
+        </p>
+
+        <!-- 12. Select property features using checkboxes -->
+        <p>
+            <label>Property Features:</label><br>
+            <input type="checkbox" id="feature-garage" name="features" value="garage">
+            <label for="feature-garage">Attached Garage</label><br>
+            
+            <input type="checkbox" id="feature-pool" name="features" value="pool">
+            <label for="feature-pool">Swimming Pool</label><br>
+            
+            <input type="checkbox" id="feature-garden" name="features" value="garden">
+            <label for="feature-garden">Backyard / Garden</label><br>
+            
+            <input type="checkbox" id="feature-hvac" name="features" value="hvac">
+            <label for="feature-hvac">Central Heating & Air Conditioning</label>
+        </p>
+
+        <hr>
+
+        <!-- 13. Submit button -->
+        <p>
+            <input type="submit" value="Submit Property Listing">
+        </p>
+
+    </form>
+
+</body>
+</html>

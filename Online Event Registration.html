@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmony Fest 2026 - Event Registration</title>
+</head>
+<body>
+
+    <h2>Harmony Fest 2026 - Registration Form</h2>
+    
+    <!-- Note: enctype="multipart/form-data" allows files to transfer correctly -->
+    <form action="/submit-registration" method="POST" enctype="multipart/form-data">
+        
+        <!-- 1. Participant name -->
+        <p>
+            <label for="participant-name">Full Name:</label><br>
+            <input type="text" id="participant-name" name="participant_name" placeholder="John Doe" required>
+        </p>
+
+        <!-- 2. Email -->
+        <p>
+            <label for="participant-email">Email Address:</label><br>
+            <input type="email" id="participant-email" name="participant_email" placeholder="johndoe@example.com" required>
+        </p>
+
+        <!-- 3. Phone -->
+        <p>
+            <label for="participant-phone">Phone Number:</label><br>
+            <input type="tel" id="participant-phone" name="participant_phone" placeholder="+1 (555) 000-0000" required>
+        </p>
+
+        <!-- 4. Gender -->
+        <p>
+            <label>Gender:</label><br>
+            <input type="radio" id="gender-male" name="gender" value="male">
+            <label for="gender-male">Male</label>
+            
+            <input type="radio" id="gender-female" name="gender" value="female">
+            <label for="gender-female">Female</label>
+            
+            <input type="radio" id="gender-other" name="gender" value="other">
+            <label for="gender-other">Other</label>
+        </p>
+
+        <!-- 5. Ticket type -->
+        <p>
+            <label for="ticket-type">Select Ticket Type:</label><br>
+            <select id="ticket-type" name="ticket_type" required>
+                <option value="">-- Choose Ticket Category --</option>
+                <option value="general">General Admission</option>
+                <option value="vip">VIP Pass (Includes Lounge Access)</option>
+                <option value="backstage">Backstage Experience</option>
+            </select>
+        </p>
+
+        <!-- 6. Number of tickets -->
+        <p>
+            <label for="ticket-quantity">Number of Tickets:</label><br>
+            <input type="number" id="ticket-quantity" name="ticket_quantity" min="1" max="10" value="1" required>
+        </p>
+
+        <!-- 7. Preferred event date -->
+        <p>
+            <label for="event-date">Preferred Festival Date:</label><br>
+            <input type="date" id="event-date" name="event_date" required>
+        </p>
+
+        <!-- 8. Preferred time -->
+        <p>
+            <label for="entry-time">Preferred Entry Time Slot:</label><br>
+            <input type="time" id="entry-time" name="entry_time" required>
+        </p>
+
+        <!-- 9. Food preference using radio buttons -->
+        <p>
+            <label>Dietary / Food Preference:</label><br>
+            <input type="radio" id="food-regular" name="food_preference" value="regular" checked>
+            <label for="food-regular">Regular (No restrictions)</label><br>
+            
+            <input type="radio" id="food-vegetarian" name="food_preference" value="vegetarian">
+            <label for="food-vegetarian">Vegetarian</label><br>
+            
+            <input type="radio" id="food-vegan" name="food_preference" value="vegan">
+            <label for="food-vegan">Vegan</label><br>
+            
+            <input type="radio" id="food-gf" name="food_preference" value="gluten-free">
+            <label for="food-gf">Gluten-Free</label>
+        </p>
+
+        <!-- 10. Additional facilities using checkboxes -->
+        <p>
+            <label>Additional Facilities / Add-ons:</label><br>
+            <input type="checkbox" id="facility-parking" name="facilities" value="parking">
+            <label for="facility-parking">VIP Parking Pass</label><br>
+            
+            <input type="checkbox" id="facility-camping" name="facilities" value="camping">
+            <label for="facility-camping">On-site Camping Spot</label><br>
+            
+            <input type="checkbox" id="facility-merch" name="facilities" value="merch">
+            <label for="facility-merch">Pre-order Official Festival T-Shirt</label><br>
+            
+            <input type="checkbox" id="facility-locker" name="facilities" value="locker">
+            <label for="facility-locker">Secure Storage Locker Rental</label>
+        </p>
+
+        <!-- 11. Upload identification document -->
+        <p>
+            <label for="id-upload">Upload Identification Document (ID / Passport):</label><br>
+            <input type="file" id="id-upload" name="id_document" accept=".pdf,.jpg,.jpeg,.png" required>
+        </p>
+
+        <!-- 12. Comments using textarea -->
+        <p>
+            <label for="user-comments">Special Requests / Accessibility Comments:</label><br>
+            <textarea id="user-comments" name="user_comments" rows="5" cols="50" placeholder="Let us know if you have any medical accessibility needs or group details..."></textarea>
+        </p>
+
+        <hr>
+
+        <!-- 13. Submit and Reset buttons -->
+        <p>
+            <input type="submit" value="Register Now">
+            <input type="reset" value="Clear Form Details">
+        </p>
+
+    </form>
+
+</body>
+</html>

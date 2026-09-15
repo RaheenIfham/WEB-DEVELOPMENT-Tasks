@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Room Booking Form</title>
+</head>
+<body>
+
+    <h2>Grand Horizon Resort - Room Booking Form</h2>
+    
+    <form action="/submit-booking" method="POST">
+        
+        <!-- 1. Guest name -->
+        <p>
+            <label for="guest-name">Full Name:</label><br>
+            <input type="text" id="guest-name" name="guest_name" placeholder="John Doe" required>
+        </p>
+
+        <!-- 2. Email -->
+        <p>
+            <label for="guest-email">Email Address:</label><br>
+            <input type="email" id="guest-email" name="guest_email" placeholder="example@domain.com" required>
+        </p>
+
+        <!-- 3. Password -->
+        <p>
+            <label for="account-password">Create Booking PIN/Password:</label><br>
+            <input type="password" id="account-password" name="account_password" placeholder="Enter a secure password" required>
+        </p>
+
+        <!-- 7. Gender using radio buttons (Grouped here naturally with guest info) -->
+        <p>
+            <label>Gender:</label><br>
+            <input type="radio" id="gender-male" name="gender" value="male">
+            <label for="gender-male">Male</label>
+            
+            <input type="radio" id="gender-female" name="gender" value="female">
+            <label for="gender-female">Female</label>
+            
+            <input type="radio" id="gender-other" name="gender" value="other">
+            <label for="gender-other">Other</label>
+        </p>
+
+        <!-- 4. Number of guests -->
+        <p>
+            <label for="guest-count">Number of Guests:</label><br>
+            <input type="number" id="guest-count" name="guest_count" min="1" max="10" value="1" required>
+        </p>
+
+        <!-- 5. Room type using dropdown -->
+        <p>
+            <label for="room-type">Room Type:</label><br>
+            <select id="room-type" name="room_type" required>
+                <option value="">-- Please Select a Room --</option>
+                <option value="standard">Standard Deluxe Room</option>
+                <option value="executive">Executive Suite</option>
+                <option value="family">Family Suite interconnecting</option>
+                <option value="penthouse">Presidential Penthouse</option>
+            </select>
+        </p>
+
+        <!-- 6. Additional facilities using checkboxes -->
+        <p>
+            <label>Additional Facilities:</label><br>
+            <input type="checkbox" id="facility-wifi" name="facilities" value="wifi">
+            <label for="facility-wifi">High-Speed Wi-Fi</label><br>
+            
+            <input type="checkbox" id="facility-breakfast" name="facilities" value="breakfast">
+            <label for="facility-breakfast">Complimentary Breakfast Buffet</label><br>
+            
+            <input type="checkbox" id="facility-pool" name="facilities" value="pool">
+            <label for="facility-pool">Access to Pool & Spa</label><br>
+            
+            <input type="checkbox" id="facility-shuttle" name="facilities" value="shuttle">
+            <label for="facility-shuttle">Airport Shuttle Service</label>
+        </p>
+
+        <!-- 8. Check-in date -->
+        <p>
+            <label for="check-in-date">Check-in Date:</label><br>
+            <input type="date" id="check-in-date" name="check_in_date" required>
+        </p>
+
+        <!-- 9. Check-out date -->
+        <p>
+            <label for="check-out-date">Check-out Date:</label><br>
+            <input type="date" id="check-out-date" name="check_out_date" required>
+        </p>
+
+        <!-- 10. Preferred check-in time -->
+        <p>
+            <label for="check-in-time">Preferred Arrival Time:</label><br>
+            <input type="time" id="check-in-time" name="check_in_time">
+        </p>
+
+        <!-- 11. Website/URL field -->
+        <p>
+            <label for="travel-agent-url">Travel Agent Website / Personal Blog Profile:</label><br>
+            <input type="url" id="travel-agent-url" name="agent_url" placeholder="https://example.com">
+        </p>
+
+        <hr>
+
+        <!-- 12. Submit and Reset buttons -->
+        <p>
+            <input type="submit" value="Book Room Now">
+            <input type="reset" value="Clear Form">
+        </p>
+
+    </form>
+
+</body>
+</html>

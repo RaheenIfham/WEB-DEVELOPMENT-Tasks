@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Portal</title>
+</head>
+<body>
+
+    <h2>Corporate Career Portal - Job Application Form</h2>
+    
+    <!-- Note: enctype="multipart/form-data" is required when forms include file uploads -->
+    <form action="/submit-application" method="POST" enctype="multipart/form-data">
+        
+        <!-- 1. Applicant name -->
+        <p>
+            <label for="applicant-name">Full Name:</label><br>
+            <input type="text" id="applicant-name" name="applicant_name" placeholder="Jane Doe" required>
+        </p>
+
+        <!-- 2. Email -->
+        <p>
+            <label for="applicant-email">Email Address:</label><br>
+            <input type="email" id="applicant-email" name="applicant_email" placeholder="jane.doe@example.com" required>
+        </p>
+
+        <!-- 3. Phone number -->
+        <p>
+            <label for="applicant-phone">Phone Number:</label><br>
+            <input type="tel" id="applicant-phone" name="applicant_phone" placeholder="+1 (555) 000-0000" required>
+        </p>
+
+        <!-- 4. Password -->
+        <p>
+            <label for="portal-password">Create Portal Password:</label><br>
+            <input type="password" id="portal-password" name="portal_password" placeholder="Minimum 8 characters" required>
+        </p>
+
+        <!-- 5. Gender -->
+        <p>
+            <label>Gender:</label><br>
+            <input type="radio" id="gender-male" name="gender" value="male">
+            <label for="gender-male">Male</label>
+            
+            <input type="radio" id="gender-female" name="gender" value="female">
+            <label for="gender-female">Female</label>
+            
+            <input type="radio" id="gender-other" name="gender" value="other">
+            <label for="gender-other">Other</label>
+        </p>
+
+        <!-- 6. Qualification -->
+        <p>
+            <label>Highest Qualification:</label><br>
+            <input type="checkbox" id="qual-highschool" name="qualification" value="highschool">
+            <label for="qual-highschool">High School Diploma</label><br>
+            
+            <input type="checkbox" id="qual-bachelors" name="qualification" value="bachelors">
+            <label for="qual-bachelors">Bachelor's Degree</label><br>
+            
+            <input type="checkbox" id="qual-masters" name="qualification" value="masters">
+            <label for="qual-masters">Master's Degree</label><br>
+            
+            <input type="checkbox" id="qual-phd" name="qualification" value="phd">
+            <label for="qual-phd">Ph.D. / Doctorate</label>
+        </p>
+
+        <!-- 7. Job position using <select> -->
+        <p>
+            <label for="job-position">Applying for Position:</label><br>
+            <select id="job-position" name="job_position" required>
+                <option value="">-- Select a Position --</option>
+                <option value="software-engineer">Software Engineer</option>
+                <option value="data-analyst">Data Analyst</option>
+                <option value="project-manager">Project Manager</option>
+                <option value="uiux-designer">UI/UX Designer</option>
+            </select>
+        </p>
+
+        <!-- 8. City using <datalist> -->
+        <p>
+            <label for="city-input">Preferred Work City:</label><br>
+            <input type="text" id="city-input" name="work_city" list="city-options" placeholder="Type or select a city..." required>
+            <datalist id="city-options">
+                <option value="New York"></option>
+                <option value="San Francisco"></option>
+                <option value="London"></option>
+                <option value="Tokyo"></option>
+                <option value="Berlin"></option>
+            </datalist>
+        </p>
+
+        <!-- 9. Expected salary using number -->
+        <p>
+            <label for="expected-salary">Expected Annual Salary ($):</label><br>
+            <input type="number" id="expected-salary" name="expected_salary" min="30000" max="300000" step="5000" placeholder="e.g., 85000" required>
+        </p>
+
+        <!-- 10. Available date -->
+        <p>
+            <label for="available-date">Earliest Available Start Date:</label><br>
+            <input type="date" id="available-date" name="available_date" required>
+        </p>
+
+        <!-- 11. Upload CV using <input type="file"> -->
+        <p>
+            <label for="resume-upload">Upload CV / Resume (PDF format preferred):</label><br>
+            <input type="file" id="resume-upload" name="resume_file" accept=".pdf,.doc,.docx" required>
+        </p>
+
+        <!-- 12. Cover letter using <textarea> -->
+        <p>
+            <label for="cover-letter">Cover Letter:</label><br>
+            <textarea id="cover-letter" name="cover_letter" rows="6" cols="50" placeholder="Briefly describe why you are a great fit for this role..."></textarea>
+        </p>
+
+        <hr>
+
+        <!-- 13. Submit and Reset buttons -->
+        <p>
+            <input type="submit" value="Submit Application">
+            <input type="reset" value="Reset Form">
+        </p>
+
+    </form>
+
+</body>
+</html>
